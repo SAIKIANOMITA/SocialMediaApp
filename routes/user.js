@@ -6,7 +6,7 @@ const createJwtToken = require('../service/auth')
 const { checkForAuthentication } = require('../middleware/auth')
 
 router.post('/register', async (req,res)=>{
-    const { username,name,email,password } = req.body;
+    const { username,name,password,email} = req.body;
     try{
        if(password.length<6){
         return res.status(400).json({error:"Password must be atleast 6 characters"})
