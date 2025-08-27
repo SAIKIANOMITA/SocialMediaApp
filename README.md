@@ -1,17 +1,13 @@
-  Working with user profiles
--Fetcing the profile of a new user '/profile/:username',
--Route for suggesting users '/profile/sugestions'
--Route for follow/unfollow users '/profile/followers/:id'
--Route to update the profile  '/profile/update'
-
-Notification Model
--Implementing "Suggested for You” feature
-
-Adding profile routes
--/:username : User is accessing the target user by using the username.
--/sugestions: User is displaying the suggested users list from the db who are already registered into our app
--/followUnfollow/:id : Controlling the following and unfollowing of users
--/update : User can update each field of the model
 
 Post Model
+-Introducing post Schema which contains the userId of the post,content written by the user,which user liked the post,which user commented the post
+-The controllers includes
+:/create -> to create the post
+:/like/:id -> collect those users in an array who liked the post  
+:/comment/:id -> collect those users in an array who commented on the post
+:/allPosts/ -> get all the Post of all users.
+:/likePost/:id -> get the likedPost array in the users
+:/followPost/:id -> get the following array of users in the user
+:/user/:username ->get all the post of the particular user whose username = user._id
+:/delete/:id -> delete a particular user
 
