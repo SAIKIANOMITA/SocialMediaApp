@@ -2,6 +2,7 @@ const express = require("express")
 const app = express();
 const userRoute = require('./routes/user')
 const profileRoute=require('./routes/profiles')
+const postRoute = require('./routes/post')
 const mongoose= require('mongoose')
 const dotenv = require('dotenv');
 const cookieParser = require("cookie-parser");
@@ -28,6 +29,7 @@ app.use(cookieParser())
 
 app.use('/user',userRoute)
 app.use('/profile',profileRoute)
+app.use('/post',postRoute)
 
 mongoose
 .connect(process.env.MONGO_URL)

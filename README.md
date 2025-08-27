@@ -12,3 +12,6 @@ Adding profile routes
 -/sugestions: User is displaying the suggested users list from the db who are already registered into our app
 -/followUnfollow/:id : Controlling the following and unfollowing of users
 -/update : User can update each field of the model
+
+Post Model
+
